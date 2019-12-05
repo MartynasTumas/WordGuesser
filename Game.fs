@@ -71,7 +71,7 @@ let PlayGame () =
                 then
                     guesses <- input.[0].ToString() :: guesses
         elif(input.Length>1 && MULTIPLE) then
-            if(List.contains (input.[0].ToString()) guesses = false)
+            if(List.contains (System.String.Concat(Array.ofList(input))) guesses = false)
             then
                 guesses <- (System.String.Concat(Array.ofList(input))) :: guesses
         else guesses <- guesses       
