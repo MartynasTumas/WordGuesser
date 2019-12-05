@@ -22,10 +22,9 @@ let rec GetHelp(word:List<char>) (guesses:List<string>) =
 
 let rec ReadInput(word:List<char>) (guesses:List<string>) =
     let key = Console.ReadKey()
-    if 
-        key.Modifiers = ConsoleModifiers.Control && key.Key = ConsoleKey.H && HELP
-    then 
-        printf"HELP USED"; [GetHelp word guesses]
+    if key.Modifiers = ConsoleModifiers.Control && key.Key = ConsoleKey.H && HELP
+        then 
+            printf"HELP USED"; [GetHelp word guesses]
     elif 
         key.Key = ConsoleKey.Enter then []
     elif 
@@ -45,7 +44,7 @@ let rec CorrectOrder (word:List<char>) (guesses:string) =
 let rec GetCorrectGuesses (word:string) (guesses:List<string>) =
     match guesses with
     |h::t when CheckGuess word h -> [h]@ GetCorrectGuesses word t
-    |h::t when not(CheckGuess word h) -> [HIDDEN]@ GetCorrectGuesses word t
+    |h::t when not(CheckGuess word h) -> GetCorrectGuesses word t
     |_ -> []
    
 let PlayGame () = 

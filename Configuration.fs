@@ -11,4 +11,4 @@ let HELP = false
 
 let MULTIPLE = false
 
-let WORDS = ["BMW"; "Toyota"; "Aston Martin"; "Opel"; "Suzuki"] 
+let WORDS = ["Denmark"; "Lithuania"; "Germany"; "United States"; "China"] 
