@@ -5,10 +5,10 @@ let HIDDEN = "*"
 
 let CASE_SENSITIVE = false
 
-let ALLOW_BLANKS = true
+let ALLOW_BLANKS = false
 
-let HELP = true
+let HELP = false
 
-let MULTIPLE = true
+let MULTIPLE = false
 
 let WORDS = ["BMW"; "Toyota"; "Aston Martin"; "Opel"; "Suzuki"] 
